@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Document</title>
+    <style>
+        .nav{
+            display: flex;
+            justify-content: space-between;
+        }
+        .title{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: xx-large;
+           
+        }
+        .logo{
+            height: 85;
+            width:380px ;}
+    </style>
+</head>
+<body>
+<div class="nav">
+    <img class="logo" src="logo.png" alt="">
+  
+    <div >
+<div id="apicart-cart-dropdown"></div>
+
+
+
+<button data-apicart-add-item="https://cdn.apicart.dev/external/wlhv1egho2u4p0e0nkne2mks7f9btigi/data/01/1.json">
+  Buy
+</button>
+
+</div></div>
+
+<div id="apicart"></div>
+
+
+<div style="max-width: 1902px; margin: 0 auto; padding: 0 20px;"></div>
+<header style="margin: 50px 0; display: flex; justify-content: center;">  
+    <div id="apicart-cart-dropdown"></div>
+</header>
+<main>
+    <!-- #apicart is the target for the application -->
+    <div id="apicart"></div>
+  </main>
+
+</div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@apicart/vue-components@1.0.0-alpha7/dist/bundles/default/default.full.min.js"></script>
+<script>
+  Apicart
+  .setDevEnv() // Switch to dev environment
+  .configure({
+    store: new Apicart.Store({
+      token: "9mCu3DlBCa4REI?Q7kKly!Rw6!_FvD8K_dgPXe1b20?r6!sPTQMyCpq_ADt!jXOD"
+    })
+  })
+  .initVueBundle();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@apicart/vue-components@1.0.0-alpha7/dist/bundles/default/default.full.min.js"></script>
+<script>
+Apicart
+  .setDevEnv()
+  .configure({
+    // Replace tokens with your PUBLIC tokens from the administration
+    store: new Apicart.Store({ token: "9mCu3DlBCa4REI?Q7kKly!Rw6!_FvD8K_dgPXe1b20?r6!sPTQMyCpq_ADt!jXOD" }),
+    payments: new Apicart.Payments({ token: "Q84lNQyLl?nBGvKxxbcdc!nWFKEZrK?L_Is2r9IaOJo14ONbXw1SMlPIeptcaFza" }),
+    vueComponents: {
+      category: {
+        products: {
+          list: [
+            // Replace tokens with your PUBLIC tokens from the administration
+            "https://cdn.apicart.dev/external/wlhv1egho2u4p0e0nkne2mks7f9btigi/data/04/4.json",
+            "https://cdn.apicart.dev/external/wlhv1egho2u4p0e0nkne2mks7f9btigi/data/03/3.json",
+            "https://cdn.apicart.dev/external/wlhv1egho2u4p0e0nkne2mks7f9btigi/data/02/2.json",
+            "https://cdn.apicart.dev/external/wlhv1egho2u4p0e0nkne2mks7f9btigi/data/01/1.json"
+          ]
+        }
+      }
+    }
+  })
+  .initVueBundle();
+</script>
+</html>
